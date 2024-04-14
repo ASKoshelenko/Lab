@@ -1,0 +1,71 @@
+# Установка Git
+sudo apt-get install git
+
+# Настройка Git
+git config --global user.name "Ваше Имя"
+git config --global user.email "ваш_email@example.com"
+git config --global core.editor vim
+
+# Создание SSH ключа и добавление его в GitLab
+ssh-keygen -t rsa -b 4096 -C "ваш_email@example.com"
+# Следуйте инструкциям, затем добавьте содержимое ~/.ssh/id_rsa.pub в GitLab
+
+# Создание нового проекта на GitLab и клонирование репозитория
+git clone git@gitlab.com:username/newproject.git
+
+# Создание и настройка .gitignore файла
+echo ".DS_Store" >> .gitignore
+echo "logs/" >> .gitignore
+echo "tmp/" >> .gitignore
+git add .gitignore
+git commit -m "Add .gitignore file"
+
+# Создание ветки develop и переключение на нее
+git checkout -b develop
+
+# Создание файла index.html и его фиксация
+touch index.html
+git add index.html
+git commit -m "Create empty index.html"
+
+# Создание ветки images и добавление в нее изображений
+git checkout -b images
+mkdir images
+# Добавьте изображения в каталог images
+git add images/
+git commit -m "Add images"
+
+# Изменение index.html и фиксация изменений
+echo "<img src='images/example.jpg'>" >> index.html
+git add index.html
+git commit -m "Add image source to index.html"
+
+# Слияние веток images и styles в develop и разрешение конфликтов
+git checkout develop
+git merge images
+git merge styles
+
+# Повторение шагов с ветками images2 и styles2, используя rebase
+git checkout -b images2
+# Добавьте изображения и выполните коммиты
+git checkout -b styles2
+# Добавьте стили и выполните коммиты
+git checkout develop
+git rebase images2
+git checkout images2
+git rebase --onto develop images2 styles2
+git checkout develop
+git merge styles2
+
+# Финальное слияние в master
+git checkout master
+git merge develop
+
+# Проверка репозитория с помощью git log
+git log --oneline --graph --all
+
+# Отправка изменений на удаленный сервер
+git push origin --all
+
+# Сохранение вывода git reflog
+git reflog > GIT_Basics_homework_I.txt
