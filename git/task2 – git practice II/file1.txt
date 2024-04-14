@@ -1,0 +1,6 @@
+<<<<<<< HEAD
+More content
+=======
+Content 1
+Content 1
+>>>>>>> 247b0bf (Commit 1 on first)

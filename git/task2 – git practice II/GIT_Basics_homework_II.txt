@@ -1,0 +1,131 @@
+4520de3 HEAD@{0}: commit (merge): Merge branch 'develop'
+1568cd1 HEAD@{1}: checkout: moving from develop to main
+df35aa4 HEAD@{2}: merge first: Fast-forward
+a5b819c HEAD@{3}: checkout: moving from first to develop
+df35aa4 HEAD@{4}: rebase (continue) (finish): returning to refs/heads/first
+df35aa4 HEAD@{5}: rebase (continue) (pick): Commit 5 on first
+2301927 HEAD@{6}: rebase (continue) (pick): Commit 4 on first
+274ee66 HEAD@{7}: rebase (continue) (pick): Commit 3 on first
+82916db HEAD@{8}: rebase (continue) (pick): Commit 2 on first
+9b11454 HEAD@{9}: rebase (continue): Updated commit
+e87c6ef HEAD@{10}: rebase (continue) (pick): Commit 5 on first
+63938e6 HEAD@{11}: rebase (continue) (pick): Commit 4 on first
+a286753 HEAD@{12}: rebase (continue) (pick): Commit 3 on first
+714bbab HEAD@{13}: rebase (continue) (pick): Commit 2 on first
+8cf3801 HEAD@{14}: rebase (continue): Commit 1 on first
+fc36469 HEAD@{15}: rebase (squash): Commit 1 on first
+bb36588 HEAD@{16}: rebase (squash): # This is a combination of 3 commits.
+d72f699 HEAD@{17}: rebase (squash): # This is a combination of 2 commits.
+7fbb784 HEAD@{18}: rebase (pick): Commit 1 on first
+a5b819c HEAD@{19}: rebase (start): checkout develop
+cd62e93 HEAD@{20}: rebase (abort): updating HEAD
+a5b819c HEAD@{21}: checkout: moving from develop to develop
+a5b819c HEAD@{22}: checkout: moving from 64157aea0dc717185b6ffee7ed8f0ea7ddcf950e to develop
+64157ae HEAD@{23}: rebase (squash): # This is a combination of 3 commits.
+1091307 HEAD@{24}: rebase (squash): # This is a combination of 2 commits.
+6ae1cbd HEAD@{25}: rebase (pick): Commit 1 on first
+a5b819c HEAD@{26}: rebase (start): checkout develop
+cd62e93 HEAD@{27}: checkout: moving from develop to first
+a5b819c HEAD@{28}: merge second: Fast-forward
+951f36d HEAD@{29}: checkout: moving from second to develop
+a5b819c HEAD@{30}: rebase (continue) (finish): returning to refs/heads/second
+a5b819c HEAD@{31}: rebase (continue) (pick): Additional changes in file7
+0ed2e54 HEAD@{32}: rebase (continue) (pick): Further changes in file6
+ed49110 HEAD@{33}: commit (amend): Updated commit with new changes
+7cff7a0 HEAD@{34}: rebase (continue) (edit): Multi-file changes on second
+770fed8 HEAD@{35}: commit: Additional edit in Second part of originally split commit
+e9cddb5 HEAD@{36}: commit: Second part of originally split commit
+94a6a78 HEAD@{37}: commit: First part of originally split commit
+951f36d HEAD@{38}: reset: moving to HEAD^
+745ef90 HEAD@{39}: rebase (edit): Multi-file changes on second
+951f36d HEAD@{40}: rebase (start): checkout develop
+720c547 HEAD@{41}: checkout: moving from second to second
+720c547 HEAD@{42}: commit: Additional changes in file7
+9a6bc05 HEAD@{43}: commit: Further changes in file6
+0eaecb4 HEAD@{44}: commit: Multi-file changes on second
+8445351 HEAD@{45}: checkout: moving from first to second
+cd62e93 HEAD@{46}: commit: Commit 5 on first
+3a8eb2a HEAD@{47}: commit: Commit 4 on first
+2bcc0da HEAD@{48}: commit: Commit 3 on first
+62e8be0 HEAD@{49}: commit: Commit 2 on first
+247b0bf HEAD@{50}: commit: Commit 1 on first
+021c785 HEAD@{51}: checkout: moving from develop to first
+951f36d HEAD@{52}: checkout: moving from second to develop
+8445351 HEAD@{53}: rebase (abort): updating HEAD
+8445351 HEAD@{54}: rebase (abort): updating HEAD
+1312d57 HEAD@{55}: checkout: moving from second to second
+1312d57 HEAD@{56}: commit: Additional changes in file7
+917ce9e HEAD@{57}: commit: Further changes in file6
+30fa571 HEAD@{58}: commit: Multi-file changes on second
+8445351 HEAD@{59}: checkout: moving from first to second
+021c785 HEAD@{60}: commit: Commit 5 on first
+7de559a HEAD@{61}: commit: Commit 4 on first
+588e3f2 HEAD@{62}: commit: Commit 3 on first
+ec3a78e HEAD@{63}: commit: Commit 2 on first
+1398d8b HEAD@{64}: commit: Commit 1 on first
+4823d0e HEAD@{65}: checkout: moving from develop to first
+951f36d HEAD@{66}: commit: Add new content to develop
+7b90c9b HEAD@{67}: checkout: moving from first to develop
+4823d0e HEAD@{68}: checkout: moving from develop to first
+7b90c9b HEAD@{69}: commit: Initial commit in task2 – git practice II
+36705c6 HEAD@{70}: checkout: moving from 36705c64885aa28a059669812a25850c1805a1c3 to develop
+36705c6 HEAD@{71}: rebase (start): checkout develop
+8445351 HEAD@{72}: checkout: moving from second to second
+8445351 HEAD@{73}: rebase (finish): returning to refs/heads/second
+8445351 HEAD@{74}: rebase (start): checkout develop
+8445351 HEAD@{75}: checkout: moving from develop to second
+36705c6 HEAD@{76}: checkout: moving from second to develop
+8445351 HEAD@{77}: rebase (abort): updating HEAD
+36705c6 HEAD@{78}: checkout: moving from 36705c64885aa28a059669812a25850c1805a1c3 to develop
+36705c6 HEAD@{79}: reset: moving to HEAD^
+117e44c HEAD@{80}: rebase (edit): Multi-file changes on second
+36705c6 HEAD@{81}: rebase (start): checkout develop
+8445351 HEAD@{82}: rebase (finish): returning to refs/heads/second
+8445351 HEAD@{83}: rebase (pick): Multi-file changes on second
+36705c6 HEAD@{84}: rebase (start): checkout develop
+a00b94a HEAD@{85}: commit: Multi-file changes on second
+aeb76df HEAD@{86}: checkout: moving from first to second
+4823d0e HEAD@{87}: commit: Commit 5 on first
+083ef63 HEAD@{88}: commit: Commit 4 on first
+481cf41 HEAD@{89}: commit: Commit 3 on first
+687e322 HEAD@{90}: commit: Commit 2 on first
+2a328c3 HEAD@{91}: commit: Commit 1 on first
+aeb76df HEAD@{92}: checkout: moving from develop to first
+36705c6 HEAD@{93}: commit: Update anyfile.txt in develop branch
+aeb76df HEAD@{94}: checkout: moving from second to develop
+aeb76df HEAD@{95}: checkout: moving from develop to second
+aeb76df HEAD@{96}: checkout: moving from first to develop
+aeb76df HEAD@{97}: checkout: moving from develop to first
+aeb76df HEAD@{98}: commit: Initial commit in task2
+a02d925 HEAD@{99}: checkout: moving from main to develop
+1568cd1 HEAD@{100}: commit: edit README.md
+365ef58 HEAD@{101}: commit: common sides and differenses between merge and rebase commands
+a02d925 HEAD@{102}: merge develop: Fast-forward
+5b50996 HEAD@{103}: checkout: moving from develop to main
+a02d925 HEAD@{104}: rebase (finish): returning to refs/heads/develop
+a02d925 HEAD@{105}: rebase (start): checkout styles2
+b24719a HEAD@{106}: checkout: moving from styles2 to develop
+a02d925 HEAD@{107}: commit: Add second set of styles
+b24719a HEAD@{108}: checkout: moving from develop to styles2
+b24719a HEAD@{109}: commit: change png to jpg
+3ed6cc0 HEAD@{110}: checkout: moving from images2 to develop
+3ed6cc0 HEAD@{111}: checkout: moving from develop to images2
+3ed6cc0 HEAD@{112}: commit: Add second set of images
+5b50996 HEAD@{113}: checkout: moving from main to develop
+5b50996 HEAD@{114}: merge develop: Fast-forward
+6ffd4a5 HEAD@{115}: checkout: moving from develop to main
+5b50996 HEAD@{116}: commit (merge): Merge branch 'styles' into develop
+55a59ac HEAD@{117}: merge images: Fast-forward
+9374f28 HEAD@{118}: checkout: moving from styles to develop
+fcec419 HEAD@{119}: commit: Add stylesheet link to index.html
+906b526 HEAD@{120}: commit: Add styles
+9374f28 HEAD@{121}: checkout: moving from develop to styles
+9374f28 HEAD@{122}: checkout: moving from images to develop
+55a59ac HEAD@{123}: commit: Add image source to index.html
+617613f HEAD@{124}: commit: Add 2 example images
+9374f28 HEAD@{125}: checkout: moving from develop to images
+9374f28 HEAD@{126}: commit: Add empty index.html
+6ffd4a5 HEAD@{127}: checkout: moving from main to develop
+6ffd4a5 HEAD@{128}: commit: Initial commit
+7a8d5f1 HEAD@{129}: pull: Fast-forward
+c8e4caa HEAD@{130}: clone: from gitlab.com:epamdevops/git.git

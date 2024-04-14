@@ -1,0 +1,29 @@
+a02d925 HEAD@{0}: merge develop: Fast-forward
+5b50996 HEAD@{1}: checkout: moving from develop to main
+a02d925 HEAD@{2}: rebase (finish): returning to refs/heads/develop
+a02d925 HEAD@{3}: rebase (start): checkout styles2
+b24719a HEAD@{4}: checkout: moving from styles2 to develop
+a02d925 HEAD@{5}: commit: Add second set of styles
+b24719a HEAD@{6}: checkout: moving from develop to styles2
+b24719a HEAD@{7}: commit: change png to jpg
+3ed6cc0 HEAD@{8}: checkout: moving from images2 to develop
+3ed6cc0 HEAD@{9}: checkout: moving from develop to images2
+3ed6cc0 HEAD@{10}: commit: Add second set of images
+5b50996 HEAD@{11}: checkout: moving from main to develop
+5b50996 HEAD@{12}: merge develop: Fast-forward
+6ffd4a5 HEAD@{13}: checkout: moving from develop to main
+5b50996 HEAD@{14}: commit (merge): Merge branch 'styles' into develop
+55a59ac HEAD@{15}: merge images: Fast-forward
+9374f28 HEAD@{16}: checkout: moving from styles to develop
+fcec419 HEAD@{17}: commit: Add stylesheet link to index.html
+906b526 HEAD@{18}: commit: Add styles
+9374f28 HEAD@{19}: checkout: moving from develop to styles
+9374f28 HEAD@{20}: checkout: moving from images to develop
+55a59ac HEAD@{21}: commit: Add image source to index.html
+617613f HEAD@{22}: commit: Add 2 example images
+9374f28 HEAD@{23}: checkout: moving from develop to images
+9374f28 HEAD@{24}: commit: Add empty index.html
+6ffd4a5 HEAD@{25}: checkout: moving from main to develop
+6ffd4a5 HEAD@{26}: commit: Initial commit
+7a8d5f1 HEAD@{27}: pull: Fast-forward
+c8e4caa HEAD@{28}: clone: from gitlab.com:epamdevops/git.git
