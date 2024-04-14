@@ -1,70 +1,113 @@
-# Установка Git
+# Part 1: Настройка рабочего окружения
+# 1. Установите Git на вашу рабочую станцию. Команда для большинства Linux дистрибутивов:
 sudo apt-get install git
 
-# Настройка Git
+# 2. Настройте Git (замените на ваши данные):
 git config --global user.name "Ваше Имя"
 git config --global user.email "ваш_email@example.com"
 git config --global core.editor vim
 
-# Создание SSH ключа и добавление его в GitLab
-ssh-keygen -t rsa -b 4096 -C "ваш_email@example.com"
-# Следуйте инструкциям, затем добавьте содержимое ~/.ssh/id_rsa.pub в GitLab
+# 3. Создайте аккаунт на GitLab через браузер.
 
-# Создание нового проекта на GitLab и клонирование репозитория
+# 4. Сгенерируйте SSH-ключ и добавьте его в GitLab:
+ssh-keygen -t rsa -b 4096 -C "ваш_email@example.com"
+# Следуйте подсказкам и добавьте созданный публичный ключ (id_rsa.pub) в GitLab.
+
+# 5. Создайте новый проект на GitLab через браузер.
+
+# 6. Клонируйте новый проект на вашу рабочую станцию:
 git clone git@gitlab.com:username/newproject.git
 
-# Создание и настройка .gitignore файла
+# 7. Создайте файл .gitignore в репозитории:
 echo ".DS_Store" >> .gitignore
 echo "logs/" >> .gitignore
 echo "tmp/" >> .gitignore
 git add .gitignore
-git commit -m "Add .gitignore file"
+git commit -m "Initial .gitignore"
 
-# Создание ветки develop и переключение на нее
+# Part 2: Работа с ветками и изменениями
+# 1-2. Создайте новую папку для экспериментов и перейдите в неё:
+mkdir "task1 – git practice I"
+cd "task1 – git practice I"
+
+# 3. Создайте пустой файл readme.txt и сделайте инициализационный коммит:
+touch readme.txt
+git add readme.txt
+git commit -m "Add empty readme"
+
+# 4-5. Создайте и переключитесь на ветку develop:
 git checkout -b develop
 
-# Создание файла index.html и его фиксация
+# 6. Создайте файл index.html и сделайте коммит:
 touch index.html
 git add index.html
-git commit -m "Create empty index.html"
+git commit -m "Add empty index.html"
 
-# Создание ветки images и добавление в нее изображений
+# 7. Создайте ветку images и добавьте изображения:
 git checkout -b images
 mkdir images
 # Добавьте изображения в каталог images
-git add images/
-git commit -m "Add images"
+git add images
+git commit -m "Add image folder with images"
 
-# Изменение index.html и фиксация изменений
+# 8. Измените index.html, добавив ссылки на изображения, и сделайте коммит:
 echo "<img src='images/example.jpg'>" >> index.html
 git add index.html
-git commit -m "Add image source to index.html"
+git commit -m "Add images to index.html"
 
-# Слияние веток images и styles в develop и разрешение конфликтов
+# 9-10. Вернитесь на ветку develop, создайте ветку styles, добавьте стили и сделайте коммит:
 git checkout develop
+git checkout -b styles
+mkdir styles
+# Добавьте файлы стилей в каталог styles
+git add styles
+git commit -m "Add styles folder with CSS files"
+
+# 11-12. Измените index.html, добавив ссылки на стили, и вернитесь на ветку develop:
+echo "<link rel='stylesheet' href='styles/style.css'>" >> index.html
+git add index.html
+git commit -m "Add styles to index.html"
+git checkout develop
+
+# 13. Слейте ветки images и styles в develop, разрешите возможные конфликты:
 git merge images
 git merge styles
+# Разрешение конфликтов при необходимости
 
-# Повторение шагов с ветками images2 и styles2, используя rebase
+# 14-15. Слейте изменения ветки develop в master и отправьте изменения на сервер:
+git checkout master
+git merge develop
+git push origin master
+
+# 16. Повторите шаги 7-15, используя ветки images2 и styles2, и примените git rebase:
+git checkout develop
 git checkout -b images2
 # Добавьте изображения и выполните коммиты
+git add images/
+git commit -m "Add more images in images2"
+
+git checkout develop
 git checkout -b styles2
 # Добавьте стили и выполните коммиты
-git checkout develop
-git rebase images2
+git add styles/
+git commit -m "Add more styles in styles2"
+
+# Используем rebase для интеграции изменений
 git checkout images2
-git rebase --onto develop images2 styles2
+git rebase develop
+git checkout develop
+git merge images2
+git checkout styles2
+git rebase develop
 git checkout develop
 git merge styles2
 
-# Финальное слияние в master
+# Сливаем изменения с develop в master
 git checkout master
 git merge develop
 
-# Проверка репозитория с помощью git log
+# Проверка репозитория и отправка изменений
 git log --oneline --graph --all
-
-# Отправка изменений на удаленный сервер
 git push origin --all
 
 # Сохранение вывода git reflog
