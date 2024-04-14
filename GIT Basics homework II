@@ -1,0 +1,60 @@
+# Переключение на ветку develop
+git checkout develop
+
+# Создание и работа в новой папке "task2 – git practice II"
+mkdir "task2 – git practice II"
+cd "task2 – git practice II"
+
+# Создание файла и его коммит
+touch newfile.txt
+git add newfile.txt
+git commit -m "Create a new file in task2 folder"
+
+# Создание и переключение на новые ветки first и second
+git checkout -b first
+git checkout -b second
+
+# Добавление изменений в ветку develop
+git checkout develop
+echo "Changes in develop" >> file.txt
+git add file.txt
+git commit -m "Commit changes in develop"
+
+# Добавление коммитов в ветку first
+git checkout first
+for i in {1..5}; do touch "file${i}.txt"; git add "file${i}.txt"; git commit -m "Commit $i on first"; done
+
+# Добавление коммитов в ветку second
+git checkout second
+for i in {6..8}; do touch "file${i}.txt"; git add "file${i}.txt"; git commit -m "Commit $i on second"; done
+
+# Интерактивный ребейзинг ветки second на develop
+git checkout second
+git rebase -i develop
+
+# Слияние веток и отправка изменений
+git checkout develop
+git merge second --ff-only
+git checkout first
+git rebase -i develop
+git checkout develop
+git merge first --ff-only
+git checkout master
+git merge develop
+git push origin --all
+
+# Сохранение вывода git reflog
+git reflog > GIT_Basics_homework_II.txt
+
+# Дополнительное задание
+git checkout master
+# Создание 4 коммитов с незначительными изменениями
+for i in {1..4}; do echo "Change $i" >> existingfile.txt; git add existingfile.txt; git commit -m "Minor change $i"; done
+
+# Сброс состояния ветки на 4 коммита назад
+git reset --hard HEAD~4
+
+# Восстановление изменений из третьего коммита
+git reflog
+# Используйте hash третьего коммита для cherry-pick
+git cherry-pick <hash-of-third-commit>
