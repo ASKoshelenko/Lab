@@ -57,4 +57,4 @@ git reset --hard HEAD~4
 # Восстановление изменений из третьего коммита
 git reflog
 # Используйте hash третьего коммита для cherry-pick
-git cherry-pick <hash-of-third-commit>
+git cherry-pick <hash-of-commit>
